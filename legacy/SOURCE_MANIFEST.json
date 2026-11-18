@@ -1,0 +1,887 @@
+[
+  {
+    "original": "DSA visualizer/.eslintrc.json",
+    "archive": "legacy/next-original/.eslintrc.json",
+    "sha256": "2990dfc547316bbdbeb4ceaa5ae91da3c962e68f3184f32c0e7b7243276ca07f"
+  },
+  {
+    "original": "DSA visualizer/.gitignore",
+    "archive": "legacy/next-original/.gitignore",
+    "sha256": "1faff43fe6e0ce661b940826381b9042e11b68045343c57d1104a38fe0120158"
+  },
+  {
+    "original": "DSA visualizer/README.md",
+    "archive": "legacy/next-original/README.md",
+    "sha256": "b943d5c4732f73da2072f209fb55ed8b3d7fde269087e5327c8db80e836a96c3"
+  },
+  {
+    "original": "DSA visualizer/app/globals.css",
+    "archive": "legacy/next-original/app/globals.css",
+    "sha256": "966b0b5fdb3dfdf7d206ff43ac3fb611fed266eaab704425cffc8cd6d98c62b4"
+  },
+  {
+    "original": "DSA visualizer/app/layout.tsx",
+    "archive": "legacy/next-original/app/layout.tsx",
+    "sha256": "5ae0a1e0ac584cba018bd013c2a89ec418d7833af4e780cbdd4eaa4115b709af"
+  },
+  {
+    "original": "DSA visualizer/app/not-found.tsx",
+    "archive": "legacy/next-original/app/not-found.tsx",
+    "sha256": "51c12315109d56f8322066a154f7d31dcb1d22279a0a5f11199b853fbf19abdd"
+  },
+  {
+    "original": "DSA visualizer/app/page.tsx",
+    "archive": "legacy/next-original/app/page.tsx",
+    "sha256": "6f9962242f8b6b0b49b339063913da110a81a68fa44e14824f0616f3e4b71b2a"
+  },
+  {
+    "original": "DSA visualizer/app/visualizers/[slug]/error.tsx",
+    "archive": "legacy/next-original/app/visualizers/[slug]/error.tsx",
+    "sha256": "13e2b383415f22feb4c0968e63898190d136652abbf65ef9abd4ceb6fae006ae"
+  },
+  {
+    "original": "DSA visualizer/app/visualizers/[slug]/page.tsx",
+    "archive": "legacy/next-original/app/visualizers/[slug]/page.tsx",
+    "sha256": "8a38c02eefb0a4562dcd39db9b5c14d06d6717a724ed49ca9ddea956a0973788"
+  },
+  {
+    "original": "DSA visualizer/app/visualizers/page.tsx",
+    "archive": "legacy/next-original/app/visualizers/page.tsx",
+    "sha256": "230416871346086ac2bafd8797f3719fda7c1a812e162e9447bb72460c82f87c"
+  },
+  {
+    "original": "DSA visualizer/components/app-shell/AppNavbar.tsx",
+    "archive": "legacy/next-original/components/app-shell/AppNavbar.tsx",
+    "sha256": "83d5cfc26a7fabe844d52bc5b9163e784ecf85accee118091e741e2f09e1b9a9"
+  },
+  {
+    "original": "DSA visualizer/components/app-shell/ThemeToggle.tsx",
+    "archive": "legacy/next-original/components/app-shell/ThemeToggle.tsx",
+    "sha256": "60e56c2ddf6f3e31657a6004af25b65c942ebc8c40e391e73760980f0d1de821"
+  },
+  {
+    "original": "DSA visualizer/components/catalog/AlgorithmCard.tsx",
+    "archive": "legacy/next-original/components/catalog/AlgorithmCard.tsx",
+    "sha256": "a463822f6ed49be3b7775c5fb2539de38cae2da0b374891f063556318ab77b96"
+  },
+  {
+    "original": "DSA visualizer/components/renderers/ArrayRenderer.tsx",
+    "archive": "legacy/next-original/components/renderers/ArrayRenderer.tsx",
+    "sha256": "bdaee211889d13a654becc206d21ebad9107949a8c2aa48545439dc6da1a29d6"
+  },
+  {
+    "original": "DSA visualizer/components/renderers/RendererSwitch.tsx",
+    "archive": "legacy/next-original/components/renderers/RendererSwitch.tsx",
+    "sha256": "183c895d8019dd12073b870b06e606d52e770d961a907e6d5995f0ba8638d965"
+  },
+  {
+    "original": "DSA visualizer/components/renderers/array-visual.ts",
+    "archive": "legacy/next-original/components/renderers/array-visual.ts",
+    "sha256": "010fe70865fc0cd278abd66789bde77c2e777140d6aa650c753834a112bb4064"
+  },
+  {
+    "original": "DSA visualizer/components/theme-provider.tsx",
+    "archive": "legacy/next-original/components/theme-provider.tsx",
+    "sha256": "844c463cf73a9bd43b27b5d329b484b60f18bc411618921ccfcb24a6e3e7af18"
+  },
+  {
+    "original": "DSA visualizer/components/ui/badge.tsx",
+    "archive": "legacy/next-original/components/ui/badge.tsx",
+    "sha256": "a60f973569da0138c9faa78ff2ad54832631d86b6e51164391f92671339362a9"
+  },
+  {
+    "original": "DSA visualizer/components/ui/button.tsx",
+    "archive": "legacy/next-original/components/ui/button.tsx",
+    "sha256": "faa1ff908f9fff166d24c7dae5ac38645b9cdc6988e0ac944585303f529ed905"
+  },
+  {
+    "original": "DSA visualizer/components/ui/card.tsx",
+    "archive": "legacy/next-original/components/ui/card.tsx",
+    "sha256": "426432f51664aa797d12443a66d556ccae355ab0020855218cecef461d2e1e13"
+  },
+  {
+    "original": "DSA visualizer/components/ui/input.tsx",
+    "archive": "legacy/next-original/components/ui/input.tsx",
+    "sha256": "b22ee040e5899bf2460c189edb76d701b9fbab2b107d36a32c35d47aa29ccc69"
+  },
+  {
+    "original": "DSA visualizer/components/ui/label.tsx",
+    "archive": "legacy/next-original/components/ui/label.tsx",
+    "sha256": "6db25c4599ffe83be108f96b0b531dd491a0acc24f12a0a7c925f50843b54dea"
+  },
+  {
+    "original": "DSA visualizer/components/ui/select.tsx",
+    "archive": "legacy/next-original/components/ui/select.tsx",
+    "sha256": "836cfa2d9da0e6fe264f7bfe477a2e1403533aa487c39751facbcdebd8dc422b"
+  },
+  {
+    "original": "DSA visualizer/components/ui/slider.tsx",
+    "archive": "legacy/next-original/components/ui/slider.tsx",
+    "sha256": "e2df9c2019246f25e4efeb3b5c40da38e7979baf50fa2f2b4ff9fa681625fe54"
+  },
+  {
+    "original": "DSA visualizer/components/ui/switch.tsx",
+    "archive": "legacy/next-original/components/ui/switch.tsx",
+    "sha256": "587857c72792bb919e3e752076b9107417cccedfdd4c9e8079957b68286b10be"
+  },
+  {
+    "original": "DSA visualizer/components/ui/tabs.tsx",
+    "archive": "legacy/next-original/components/ui/tabs.tsx",
+    "sha256": "3398cbce4c736bf2000e815fb1a128c24ad68cc7fcadc609f8f66ca230d6cd5c"
+  },
+  {
+    "original": "DSA visualizer/components/ui/tooltip.tsx",
+    "archive": "legacy/next-original/components/ui/tooltip.tsx",
+    "sha256": "24fed45941c24ab3686f293c65fc1132f40a9288410db520bf553048ba75b096"
+  },
+  {
+    "original": "DSA visualizer/components/visualizer/ArrayDataControls.tsx",
+    "archive": "legacy/next-original/components/visualizer/ArrayDataControls.tsx",
+    "sha256": "c21e82096204932f24ec49101851dec287cfaed7f00ee86389970319cc6eead1"
+  },
+  {
+    "original": "DSA visualizer/components/visualizer/CodeTracePanel.tsx",
+    "archive": "legacy/next-original/components/visualizer/CodeTracePanel.tsx",
+    "sha256": "5f0954c4f9acdc0a0522cf97bcb0bc30461debd79be104a2688293f26effd1ab"
+  },
+  {
+    "original": "DSA visualizer/components/visualizer/InfoTabs.tsx",
+    "archive": "legacy/next-original/components/visualizer/InfoTabs.tsx",
+    "sha256": "a5c719b32c73cc3bb1d5978912d367213afe518219b1c2e8d7da999bc6d6b1b5"
+  },
+  {
+    "original": "DSA visualizer/components/visualizer/InspectorPanel.tsx",
+    "archive": "legacy/next-original/components/visualizer/InspectorPanel.tsx",
+    "sha256": "ad7ecce6f2d0c0e1ea381e84b93594f4c815daf8d86bf588c86020361d6c0dbb"
+  },
+  {
+    "original": "DSA visualizer/components/visualizer/Legend.tsx",
+    "archive": "legacy/next-original/components/visualizer/Legend.tsx",
+    "sha256": "c6627b81c5a3ffd91036becd873c5f3f2598a2bd8fd68191a8cad2ae69f7b1ac"
+  },
+  {
+    "original": "DSA visualizer/components/visualizer/LightweightCode.tsx",
+    "archive": "legacy/next-original/components/visualizer/LightweightCode.tsx",
+    "sha256": "6e802000806e813865c485f21b72358185a0092c02c2526db70c4744e8bc88ba"
+  },
+  {
+    "original": "DSA visualizer/components/visualizer/MetricsPanel.tsx",
+    "archive": "legacy/next-original/components/visualizer/MetricsPanel.tsx",
+    "sha256": "fb10474c6e30e2e96b6db858f3692a610ad6e077982f08f66fed934ad9376db7"
+  },
+  {
+    "original": "DSA visualizer/components/visualizer/MonacoCode.tsx",
+    "archive": "legacy/next-original/components/visualizer/MonacoCode.tsx",
+    "sha256": "5f41fab24ae060dbdab92b352a4471cb7fb54862d56acc290e3c3717c76828fe"
+  },
+  {
+    "original": "DSA visualizer/components/visualizer/PlaybackControls.tsx",
+    "archive": "legacy/next-original/components/visualizer/PlaybackControls.tsx",
+    "sha256": "fd056cb786317e7de361fda6281a58f5cd25b1ecba207303330795bda86387d3"
+  },
+  {
+    "original": "DSA visualizer/components/visualizer/PreferencesControls.tsx",
+    "archive": "legacy/next-original/components/visualizer/PreferencesControls.tsx",
+    "sha256": "e55f5bda3740c9e8acde026198c186cc1b20118d09a2ebfd3e98b75080449a47"
+  },
+  {
+    "original": "DSA visualizer/components/visualizer/VisualizationViewport.tsx",
+    "archive": "legacy/next-original/components/visualizer/VisualizationViewport.tsx",
+    "sha256": "77e903bf4964fc881438dbeaba40bea14a627e4f92b7b8d439142b1e94ff892e"
+  },
+  {
+    "original": "DSA visualizer/components/visualizer/VisualizerShell.tsx",
+    "archive": "legacy/next-original/components/visualizer/VisualizerShell.tsx",
+    "sha256": "e5bd634892aa368838affc7f79a966ef6be7a05ffff8edc987298e4aaa6521c4"
+  },
+  {
+    "original": "DSA visualizer/components/visualizer/VisualizerToolbar.tsx",
+    "archive": "legacy/next-original/components/visualizer/VisualizerToolbar.tsx",
+    "sha256": "63116f72c80916f6ee904de1fd8917c160ff41ce6ea1e9ebab0d92cb10e88ea3"
+  },
+  {
+    "original": "DSA visualizer/lib/algorithms/registry.ts",
+    "archive": "legacy/next-original/lib/algorithms/registry.ts",
+    "sha256": "c388a413b70f907865b7bc138b7f48210e191bc26f0b256a9ff817db3501aff1"
+  },
+  {
+    "original": "DSA visualizer/lib/algorithms/search/binary-search/definition.ts",
+    "archive": "legacy/next-original/lib/algorithms/search/binary-search/definition.ts",
+    "sha256": "96cb6a1933a97b4bc1b695c0a63502ad542fcba7c446570cb9ed8ade14d72bd5"
+  },
+  {
+    "original": "DSA visualizer/lib/algorithms/search/binary-search/generator.ts",
+    "archive": "legacy/next-original/lib/algorithms/search/binary-search/generator.ts",
+    "sha256": "ab9739ad3960bdf3087336c858a32176dfb3bfb596475b984269758884163cbe"
+  },
+  {
+    "original": "DSA visualizer/lib/algorithms/search/exponential-search/definition.ts",
+    "archive": "legacy/next-original/lib/algorithms/search/exponential-search/definition.ts",
+    "sha256": "d8d1a54dab64b43e508c80b49fc7111464f86bd0e5e43e8c86cbe4ecbf5967c3"
+  },
+  {
+    "original": "DSA visualizer/lib/algorithms/search/exponential-search/generator.ts",
+    "archive": "legacy/next-original/lib/algorithms/search/exponential-search/generator.ts",
+    "sha256": "1acf0a05e9eb3ed12cc6fdc859101824cf44d07ffc286ba390fd60a281200724"
+  },
+  {
+    "original": "DSA visualizer/lib/algorithms/search/interpolation-search/definition.ts",
+    "archive": "legacy/next-original/lib/algorithms/search/interpolation-search/definition.ts",
+    "sha256": "871a8c68b3cd061d30daf898a8a940112f3b8e2213cfda16a212918ce2f87a99"
+  },
+  {
+    "original": "DSA visualizer/lib/algorithms/search/interpolation-search/generator.ts",
+    "archive": "legacy/next-original/lib/algorithms/search/interpolation-search/generator.ts",
+    "sha256": "dbe3566261e97e44d8afb85f3520f7ef27da584c8391e5e047b4187e2fcfd752"
+  },
+  {
+    "original": "DSA visualizer/lib/algorithms/search/jump-search/definition.ts",
+    "archive": "legacy/next-original/lib/algorithms/search/jump-search/definition.ts",
+    "sha256": "791dc077dc567674b9bf2d8cee1fd99e884e6412c4e4b74d7c71d66d31662cfe"
+  },
+  {
+    "original": "DSA visualizer/lib/algorithms/search/jump-search/generator.ts",
+    "archive": "legacy/next-original/lib/algorithms/search/jump-search/generator.ts",
+    "sha256": "8e008b42d3a72853e8c232e1f239698a90832aa655e12e0351c604c195427754"
+  },
+  {
+    "original": "DSA visualizer/lib/algorithms/search/linear-search/definition.ts",
+    "archive": "legacy/next-original/lib/algorithms/search/linear-search/definition.ts",
+    "sha256": "1de071f102ef68ed3a28e8e56de552ead53337c350301e09775f3d405d231d20"
+  },
+  {
+    "original": "DSA visualizer/lib/algorithms/search/linear-search/generator.ts",
+    "archive": "legacy/next-original/lib/algorithms/search/linear-search/generator.ts",
+    "sha256": "ed1f769b51d829478b09680b7fcc2c1bbfb6e96dfa633657f44ed9220a0aaedd"
+  },
+  {
+    "original": "DSA visualizer/lib/algorithms/search/ternary-search/definition.ts",
+    "archive": "legacy/next-original/lib/algorithms/search/ternary-search/definition.ts",
+    "sha256": "b974eccd6bad3cbc56dc449976805735cedc3f5b4ede80cfd36ac771abefb44a"
+  },
+  {
+    "original": "DSA visualizer/lib/algorithms/search/ternary-search/generator.ts",
+    "archive": "legacy/next-original/lib/algorithms/search/ternary-search/generator.ts",
+    "sha256": "fc8a1338cfd7479ecca225d7c311caa9ee4f389029ec9fe1db8ad35245f7b0d9"
+  },
+  {
+    "original": "DSA visualizer/lib/algorithms/shared/array-model.ts",
+    "archive": "legacy/next-original/lib/algorithms/shared/array-model.ts",
+    "sha256": "48e5f5a391fd27fc70a1cba26c43f6eaf0ffd1cea583784df7f1256736106292"
+  },
+  {
+    "original": "DSA visualizer/lib/algorithms/shared/emit.ts",
+    "archive": "legacy/next-original/lib/algorithms/shared/emit.ts",
+    "sha256": "08bc1a90ad31124b4472cae4192948847308d1472419c51ac2ece8128ada4b0c"
+  },
+  {
+    "original": "DSA visualizer/lib/algorithms/shared/inputs.ts",
+    "archive": "legacy/next-original/lib/algorithms/shared/inputs.ts",
+    "sha256": "efa4fc414f584e66603f779ecbfd8d342e7f36d1e8a98e7bd778ab5e62d810a5"
+  },
+  {
+    "original": "DSA visualizer/lib/algorithms/sorting/bubble-sort/definition.ts",
+    "archive": "legacy/next-original/lib/algorithms/sorting/bubble-sort/definition.ts",
+    "sha256": "9eaed7742de6abee716c6c99ff68e01b9121f4ccd9ee764c61cdd98f6480fb44"
+  },
+  {
+    "original": "DSA visualizer/lib/algorithms/sorting/bubble-sort/generator.ts",
+    "archive": "legacy/next-original/lib/algorithms/sorting/bubble-sort/generator.ts",
+    "sha256": "48b2ef4344a53de2ee615822c98dd54bd8ae7968cc879248dd33ce0828474233"
+  },
+  {
+    "original": "DSA visualizer/lib/algorithms/sorting/bubble-sort/types.ts",
+    "archive": "legacy/next-original/lib/algorithms/sorting/bubble-sort/types.ts",
+    "sha256": "ba89c7675581494cdef6adfef838ec35aede6ab7c42aef502f4bba3a144f0da5"
+  },
+  {
+    "original": "DSA visualizer/lib/algorithms/sorting/heap-sort/definition.ts",
+    "archive": "legacy/next-original/lib/algorithms/sorting/heap-sort/definition.ts",
+    "sha256": "21ec2c6a5e069fd88a0dcd84a1a09ea2c05fe30295cf49f146f4b1d833668615"
+  },
+  {
+    "original": "DSA visualizer/lib/algorithms/sorting/heap-sort/generator.ts",
+    "archive": "legacy/next-original/lib/algorithms/sorting/heap-sort/generator.ts",
+    "sha256": "6244d4158a78e4da8be3fa570e940cc22a7d8eac7b97f631624160caa5e4065d"
+  },
+  {
+    "original": "DSA visualizer/lib/algorithms/sorting/insertion-sort/definition.ts",
+    "archive": "legacy/next-original/lib/algorithms/sorting/insertion-sort/definition.ts",
+    "sha256": "c4261c1824741003bafd797b2a9668cafd166966789e464b52e314489a613fe9"
+  },
+  {
+    "original": "DSA visualizer/lib/algorithms/sorting/insertion-sort/generator.ts",
+    "archive": "legacy/next-original/lib/algorithms/sorting/insertion-sort/generator.ts",
+    "sha256": "78f614c53cb6b6e37dffea3a30c32a07b7e3a5e24d4fc07479a0921380a0e1e8"
+  },
+  {
+    "original": "DSA visualizer/lib/algorithms/sorting/merge-sort/definition.ts",
+    "archive": "legacy/next-original/lib/algorithms/sorting/merge-sort/definition.ts",
+    "sha256": "448917512b691be72e2125a25f629a11fd550ca49ccc909206596adfb810a29e"
+  },
+  {
+    "original": "DSA visualizer/lib/algorithms/sorting/merge-sort/generator.ts",
+    "archive": "legacy/next-original/lib/algorithms/sorting/merge-sort/generator.ts",
+    "sha256": "061242963c43f115c49022e12cebc3cff529c5a00fc1363ed9412861764846bb"
+  },
+  {
+    "original": "DSA visualizer/lib/algorithms/sorting/quick-sort/definition.ts",
+    "archive": "legacy/next-original/lib/algorithms/sorting/quick-sort/definition.ts",
+    "sha256": "dea7cb984a25883563dd8a6e5a02232297682cd1e1e596e297e35df5801f248d"
+  },
+  {
+    "original": "DSA visualizer/lib/algorithms/sorting/quick-sort/generator.ts",
+    "archive": "legacy/next-original/lib/algorithms/sorting/quick-sort/generator.ts",
+    "sha256": "44601e7e2ba10136d113402d075efc9199d40b0aae82276e2f3bc4bfb6680705"
+  },
+  {
+    "original": "DSA visualizer/lib/algorithms/sorting/selection-sort/definition.ts",
+    "archive": "legacy/next-original/lib/algorithms/sorting/selection-sort/definition.ts",
+    "sha256": "afc04d90a6c0e01b52d401029871d07c9d6db9fda634711ef4744f20de0cdf77"
+  },
+  {
+    "original": "DSA visualizer/lib/algorithms/sorting/selection-sort/generator.ts",
+    "archive": "legacy/next-original/lib/algorithms/sorting/selection-sort/generator.ts",
+    "sha256": "e339b05dc587b8d17ae26d06d9dafb7231b8c5766fc4bf8c5a187c59a3888120"
+  },
+  {
+    "original": "DSA visualizer/lib/algorithms/types.ts",
+    "archive": "legacy/next-original/lib/algorithms/types.ts",
+    "sha256": "fad0a10abcaa9b09054c178db1b937f078e2d7d7bab814814629883ec76f2a32"
+  },
+  {
+    "original": "DSA visualizer/lib/algorithms/validateSteps.ts",
+    "archive": "legacy/next-original/lib/algorithms/validateSteps.ts",
+    "sha256": "3c3dadad1ab61bad008909d35de4959dd69403121f4f09727d72a11087798c38"
+  },
+  {
+    "original": "DSA visualizer/lib/audio/VisualizationAudioEngine.ts",
+    "archive": "legacy/next-original/lib/audio/VisualizationAudioEngine.ts",
+    "sha256": "4f0b74623521e553f3f81ec693dcabeefbe01cb559c021a58e200aafab5816fb"
+  },
+  {
+    "original": "DSA visualizer/lib/audio/cue.ts",
+    "archive": "legacy/next-original/lib/audio/cue.ts",
+    "sha256": "792e2fdd5075a71c1b416175174ce0ddca68a96721c7aa47aa073882a659a1d7"
+  },
+  {
+    "original": "DSA visualizer/lib/hooks/useKeyboardShortcuts.ts",
+    "archive": "legacy/next-original/lib/hooks/useKeyboardShortcuts.ts",
+    "sha256": "b97ee6e6a794332d3b947766a2e8490242e895179d73818d5ef1574e95c8eb23"
+  },
+  {
+    "original": "DSA visualizer/lib/hooks/useMounted.ts",
+    "archive": "legacy/next-original/lib/hooks/useMounted.ts",
+    "sha256": "12e486aef50d90228fde1e6e2a124a59ae99b56ad088026450105c5f6a65be28"
+  },
+  {
+    "original": "DSA visualizer/lib/hooks/useReducedMotion.ts",
+    "archive": "legacy/next-original/lib/hooks/useReducedMotion.ts",
+    "sha256": "90074484755c7dbbcfdf426d85b5bd0f79fab458eb3b9a83fd5c1908a55375c7"
+  },
+  {
+    "original": "DSA visualizer/lib/hooks/useStepAudio.ts",
+    "archive": "legacy/next-original/lib/hooks/useStepAudio.ts",
+    "sha256": "fe0f56017a0090ff6d75bf96bc5a3be57be9dd3430d813214d12c321b8751cba"
+  },
+  {
+    "original": "DSA visualizer/lib/playback/buildSteps.ts",
+    "archive": "legacy/next-original/lib/playback/buildSteps.ts",
+    "sha256": "65c0d78be7760260f69f901344e84ffe02bc7b7e35679e8025d73e5ede934609"
+  },
+  {
+    "original": "DSA visualizer/lib/playback/timing.ts",
+    "archive": "legacy/next-original/lib/playback/timing.ts",
+    "sha256": "0170ec2efd2c59f526cdc93199f76ec9b3b72179967e44b6bf6402b110565fdf"
+  },
+  {
+    "original": "DSA visualizer/lib/stores/usePlaybackStore.ts",
+    "archive": "legacy/next-original/lib/stores/usePlaybackStore.ts",
+    "sha256": "cdd5637b361361f7df13253752a8c6a8df4b887ba07608434c90c4a1d06ef426"
+  },
+  {
+    "original": "DSA visualizer/lib/stores/usePreferencesStore.ts",
+    "archive": "legacy/next-original/lib/stores/usePreferencesStore.ts",
+    "sha256": "a5a8dfe67b4c26bdc0143b3b971d97f91491237cef31fa4e149e92437f8a36ba"
+  },
+  {
+    "original": "DSA visualizer/lib/utils.ts",
+    "archive": "legacy/next-original/lib/utils.ts",
+    "sha256": "38d812cd8a2ecea71129ab8e86bd8bcf648a03b0449411f25b2bdf77302f2c6a"
+  },
+  {
+    "original": "DSA visualizer/next-env.d.ts",
+    "archive": "legacy/next-original/next-env.d.ts",
+    "sha256": "9dd9d642cdb87d4d5b3173217e0c45429b3e47a6f5cf5fb0ead6c644ec5fed01"
+  },
+  {
+    "original": "DSA visualizer/next.config.mjs",
+    "archive": "legacy/next-original/next.config.mjs",
+    "sha256": "73f18ea67787ab9d40bedbf6600bc6f822dfc31347374a54677d67a36567b20b"
+  },
+  {
+    "original": "DSA visualizer/package-lock.json",
+    "archive": "legacy/next-original/package-lock.json",
+    "sha256": "b3b1d18d1a14d6348ea674f6e7998e104c88ee040c94b414894a667ba7cf7d77"
+  },
+  {
+    "original": "DSA visualizer/package.json",
+    "archive": "legacy/next-original/package.json",
+    "sha256": "984dd63224a4d27a98368060a1d0919c177c697d03275254ec499d134d320047"
+  },
+  {
+    "original": "DSA visualizer/playwright.config.ts",
+    "archive": "legacy/next-original/playwright.config.ts",
+    "sha256": "d11024e6f26603e389cbdd397dfd8e8e4b88bba39bd68f824fc5301c8e6690da"
+  },
+  {
+    "original": "DSA visualizer/postcss.config.mjs",
+    "archive": "legacy/next-original/postcss.config.mjs",
+    "sha256": "efa65c65e17d51d58570edce9d702b0604fdf6a9b8db65afaed8f075af8867c7"
+  },
+  {
+    "original": "DSA visualizer/tailwind.config.ts",
+    "archive": "legacy/next-original/tailwind.config.ts",
+    "sha256": "b66107402d3889a5e1aa5010fe42f577053023eb7c3293dcf76228d7bb7e9c0b"
+  },
+  {
+    "original": "DSA visualizer/tests/algorithms/bubble-sort.test.ts",
+    "archive": "legacy/next-original/tests/algorithms/bubble-sort.test.ts",
+    "sha256": "d76070522ab580602c80235a7136a54b05bf7587ba9e4abfb4ea9c3f1346eaf3"
+  },
+  {
+    "original": "DSA visualizer/tests/algorithms/line-maps.test.ts",
+    "archive": "legacy/next-original/tests/algorithms/line-maps.test.ts",
+    "sha256": "4ae9dd4c1b4fbf722a0a1151403f053b5d6b17891cafe7ed1dd089a21667c863"
+  },
+  {
+    "original": "DSA visualizer/tests/algorithms/search.test.ts",
+    "archive": "legacy/next-original/tests/algorithms/search.test.ts",
+    "sha256": "97b6b7aee0a907c67a84c99506d3437f63295cc2ae62b97552cef38eabed8718"
+  },
+  {
+    "original": "DSA visualizer/tests/algorithms/sorting.test.ts",
+    "archive": "legacy/next-original/tests/algorithms/sorting.test.ts",
+    "sha256": "6079c493c0416e4b3d02f0a134430d66207ce85767e80bcc1505cb9094eb8370"
+  },
+  {
+    "original": "DSA visualizer/tests/components/array-renderer.test.tsx",
+    "archive": "legacy/next-original/tests/components/array-renderer.test.tsx",
+    "sha256": "b1a60b38e00ab6960588562e0a4d39ef041a60f22eccea334cbb84925a95d669"
+  },
+  {
+    "original": "DSA visualizer/tests/components/playback-controls.test.tsx",
+    "archive": "legacy/next-original/tests/components/playback-controls.test.tsx",
+    "sha256": "7285c0e63a12cb23f319c3f101283540a0f02c64d600d5d7b730769dc23a4cb2"
+  },
+  {
+    "original": "DSA visualizer/tests/e2e/smoke.spec.ts",
+    "archive": "legacy/next-original/tests/e2e/smoke.spec.ts",
+    "sha256": "a146483485ba4487e912d5c8c1a8363674d231c8cc983c67b91f894c8e7dba7c"
+  },
+  {
+    "original": "DSA visualizer/tests/stores/playback-store.test.ts",
+    "archive": "legacy/next-original/tests/stores/playback-store.test.ts",
+    "sha256": "474aa9c47742e5793e66d87578f01c9dfee8debd6bfb52f796045f2483786cdb"
+  },
+  {
+    "original": "DSA visualizer/tsconfig.json",
+    "archive": "legacy/next-original/tsconfig.json",
+    "sha256": "7b8a53ba3d1e0dea2969c6ceba707ebd19e47c7209fd9d5d01491a6c33310e8d"
+  },
+  {
+    "original": "DSA visualizer/vitest.config.ts",
+    "archive": "legacy/next-original/vitest.config.ts",
+    "sha256": "f4dd22e6df92c5626db392ba8ed90e46a0e61c472176a6934de51a5adf619b24"
+  },
+  {
+    "original": "DSA visualizer/vitest.setup.ts",
+    "archive": "legacy/next-original/vitest.setup.ts",
+    "sha256": "8530b12b97abcc6c2b45975a0040e5b41eeb5b5597a661662bed4081f0af2129"
+  },
+  {
+    "original": "Claude Code/README.md",
+    "archive": "legacy/claude-code/README.md",
+    "sha256": "86cf3b839f11e0ed067c0b82528698f4100decc0ed2841f7435e146aaefc5803"
+  },
+  {
+    "original": "Claude Code/audio_to_tab.py",
+    "archive": "legacy/claude-code/audio_to_tab.py",
+    "sha256": "08f44e3cba7b487a5985b6d9ef7f521a1b30996a7d65270ab6e401ec1190754b"
+  },
+  {
+    "original": "Claude Code/audio_to_tab_requirements.txt",
+    "archive": "legacy/claude-code/audio_to_tab_requirements.txt",
+    "sha256": "f8f2c2cbbbe275e9a500e5cd3cadc7e02fe91bdd0b3300857edc43b26d746ea1"
+  },
+  {
+    "original": "Claude Code/css/styles.css",
+    "archive": "legacy/claude-code/css/styles.css",
+    "sha256": "dc449a34ea3b324b05f3a1774901762927dc2a2847fcfc5ff446ab01b209985e"
+  },
+  {
+    "original": "Claude Code/dsa_ml_visualizer/README.md",
+    "archive": "legacy/claude-code/dsa_ml_visualizer/README.md",
+    "sha256": "bff40c5df9b2ad1f4017a83b058a0118e4c60ca37074e834a408876856c26b80"
+  },
+  {
+    "original": "Claude Code/dsa_ml_visualizer/ai/__init__.py",
+    "archive": "legacy/claude-code/dsa_ml_visualizer/ai/__init__.py",
+    "sha256": "95909fc077c1d0decd0730eb09ba7848d20a048b585ecc843f0e1c36bee4507d"
+  },
+  {
+    "original": "Claude Code/dsa_ml_visualizer/ai/attention.py",
+    "archive": "legacy/claude-code/dsa_ml_visualizer/ai/attention.py",
+    "sha256": "a8e1a0019bf152365d0eda4a48ded9d054e3e3cfa030abd15a9a646e51502e08"
+  },
+  {
+    "original": "Claude Code/dsa_ml_visualizer/ai/tokenizer.py",
+    "archive": "legacy/claude-code/dsa_ml_visualizer/ai/tokenizer.py",
+    "sha256": "e507a6eda1a74da02bdce0b6064070103a2dc501229135c68335d11fa9d6eef6"
+  },
+  {
+    "original": "Claude Code/dsa_ml_visualizer/app.py",
+    "archive": "legacy/claude-code/dsa_ml_visualizer/app.py",
+    "sha256": "7abcd3e3dcd4d8ef35a483efed8ac17601419d073c8dacfb64b5aa48a311b1da"
+  },
+  {
+    "original": "Claude Code/dsa_ml_visualizer/core/__init__.py",
+    "archive": "legacy/claude-code/dsa_ml_visualizer/core/__init__.py",
+    "sha256": "a9307cd9be13c2cf1f4039a7b2ee037b044440130b1e0e4edefff2d194c5ab03"
+  },
+  {
+    "original": "Claude Code/dsa_ml_visualizer/core/state.py",
+    "archive": "legacy/claude-code/dsa_ml_visualizer/core/state.py",
+    "sha256": "13fab81f6d0489d4fbc64f0c13cfbdd16f11f73f6d01dcc007d9f7623b4346db"
+  },
+  {
+    "original": "Claude Code/dsa_ml_visualizer/core/verification.py",
+    "archive": "legacy/claude-code/dsa_ml_visualizer/core/verification.py",
+    "sha256": "7c92c31cc2af3409c7ff8575526699cb4e1c0329f7e473a63e1dc055daed4eab"
+  },
+  {
+    "original": "Claude Code/dsa_ml_visualizer/dsa/__init__.py",
+    "archive": "legacy/claude-code/dsa_ml_visualizer/dsa/__init__.py",
+    "sha256": "a8c6294654f9a0bab7a8444aa17dcc28faf4a126c3fdb2f4e9d9671264865119"
+  },
+  {
+    "original": "Claude Code/dsa_ml_visualizer/dsa/dynamic_programming.py",
+    "archive": "legacy/claude-code/dsa_ml_visualizer/dsa/dynamic_programming.py",
+    "sha256": "e4dd70250fd2437a60bdcb9cda1f4bbb94b297b1980450eb550869abe99bc8f4"
+  },
+  {
+    "original": "Claude Code/dsa_ml_visualizer/dsa/graph_traversal.py",
+    "archive": "legacy/claude-code/dsa_ml_visualizer/dsa/graph_traversal.py",
+    "sha256": "04ff671c53150bd81c5e8f80a76e966defb23100e3fce95a4049afd1879dd5b7"
+  },
+  {
+    "original": "Claude Code/dsa_ml_visualizer/dsa/linked_list.py",
+    "archive": "legacy/claude-code/dsa_ml_visualizer/dsa/linked_list.py",
+    "sha256": "a043d038ddbc3e869272216682f59738ebd4247cbb7d8aeba33534c050a136a4"
+  },
+  {
+    "original": "Claude Code/dsa_ml_visualizer/dsa/sorting.py",
+    "archive": "legacy/claude-code/dsa_ml_visualizer/dsa/sorting.py",
+    "sha256": "8f707b3d19dcc43c7ff8532479c9b3f1cfb01a2322cd780c217b35a77170ab4b"
+  },
+  {
+    "original": "Claude Code/dsa_ml_visualizer/package-lock.json",
+    "archive": "legacy/claude-code/dsa_ml_visualizer/package-lock.json",
+    "sha256": "a459fd98dca149ba053b2169d3abfbc64f46cb0e92f14fc75f4e8ef5ff97b7df"
+  },
+  {
+    "original": "Claude Code/dsa_ml_visualizer/requirements.txt",
+    "archive": "legacy/claude-code/dsa_ml_visualizer/requirements.txt",
+    "sha256": "f9564ac3169147f5cc089abbbe37f4ba98c7376b0d600c711a78a7e58fa4912d"
+  },
+  {
+    "original": "Claude Code/dsa_ml_visualizer/tests/__init__.py",
+    "archive": "legacy/claude-code/dsa_ml_visualizer/tests/__init__.py",
+    "sha256": "6e991308bbc3e2a6b435af686a090aea34c7b84307bbf6c273db7e350e4cabe5"
+  },
+  {
+    "original": "Claude Code/dsa_ml_visualizer/tests/test_attention.py",
+    "archive": "legacy/claude-code/dsa_ml_visualizer/tests/test_attention.py",
+    "sha256": "820d982cac368d1c19c4125a858e35b8a50dc9f733ad8fe023f854fd63060f5d"
+  },
+  {
+    "original": "Claude Code/dsa_ml_visualizer/ui/__init__.py",
+    "archive": "legacy/claude-code/dsa_ml_visualizer/ui/__init__.py",
+    "sha256": "736712648c83c517d42d0aeb5456ff2f079a091033bcbcc2c13f26917f36ca02"
+  },
+  {
+    "original": "Claude Code/dsa_ml_visualizer/ui/ai_pages.py",
+    "archive": "legacy/claude-code/dsa_ml_visualizer/ui/ai_pages.py",
+    "sha256": "c387342bfb956f7f66492242f6a58fef2bdb81daef1d93d9c30237fe0676bc84"
+  },
+  {
+    "original": "Claude Code/dsa_ml_visualizer/ui/components.py",
+    "archive": "legacy/claude-code/dsa_ml_visualizer/ui/components.py",
+    "sha256": "fd3c068783291cad5c8ad6f4022c78454a4463a10c03b3db7f413146a4ec510c"
+  },
+  {
+    "original": "Claude Code/dsa_ml_visualizer/ui/dsa_pages.py",
+    "archive": "legacy/claude-code/dsa_ml_visualizer/ui/dsa_pages.py",
+    "sha256": "7ca0a0a7e9ae2c33db5ce2d368d9708733c42a096203cad9a430152ed6d1fd24"
+  },
+  {
+    "original": "Claude Code/index.html",
+    "archive": "legacy/claude-code/index.html",
+    "sha256": "be0ce031551ddcc9bb7e546541a54ebad99d0479600874a097a8aa1ae2cfeb28"
+  },
+  {
+    "original": "Claude Code/js/app.js",
+    "archive": "legacy/claude-code/js/app.js",
+    "sha256": "b58663eb97924bea30fd5d8fab55beb1ef3191706130b42e1a64505fc41bc062"
+  },
+  {
+    "original": "Claude Code/js/datasets.js",
+    "archive": "legacy/claude-code/js/datasets.js",
+    "sha256": "2fe721fbe653e21225de22f4e44d72398f013b051f009f36c9155086d9d54f5a"
+  },
+  {
+    "original": "Claude Code/js/kmeans.js",
+    "archive": "legacy/claude-code/js/kmeans.js",
+    "sha256": "b3c6541f523f8fe68e50d262a4ec06f76ce4fb95ffae16044ae131732adb43d8"
+  },
+  {
+    "original": "Claude Code/js/nn.js",
+    "archive": "legacy/claude-code/js/nn.js",
+    "sha256": "dfa8375a9f00604101dbd437009c61f38be09bccbc69b35faafda42e5e87f734"
+  },
+  {
+    "original": "Claude Code/js/optimizers.js",
+    "archive": "legacy/claude-code/js/optimizers.js",
+    "sha256": "cce4e47a54cbdc67cdde077b5282fa1e11536496908ad0c3c461d932a1fa8fef"
+  },
+  {
+    "original": "Claude Code/js/playground.js",
+    "archive": "legacy/claude-code/js/playground.js",
+    "sha256": "b1868e0c2c5f0e6efdaf82b13915c39f8007b4d5c6f03026c5f324336d19165c"
+  },
+  {
+    "original": "Claude Code/js/regression.js",
+    "archive": "legacy/claude-code/js/regression.js",
+    "sha256": "73d29d4f89ee2173017d4bd6a588b825199c7b02ae559c65cc000e6cb5d222ed"
+  },
+  {
+    "original": "Claude Code/js/ui.js",
+    "archive": "legacy/claude-code/js/ui.js",
+    "sha256": "27c2ed70ba2321d9393e3fad02b469a7835346a5d75a808b5a172ff92049b88f"
+  },
+  {
+    "original": "Claude Code/js/utils.js",
+    "archive": "legacy/claude-code/js/utils.js",
+    "sha256": "4be9f262f42ee15d00b3959ef4c9968dcf85eca8c610dceebb5d69eb281323b9"
+  },
+  {
+    "original": "DSA/.gitignore",
+    "archive": "legacy/python-dsa/.gitignore",
+    "sha256": "1c1881053a5169bf2c4e3015aabdacabc65d7028e32c275fecbdd5d4343aa88a"
+  },
+  {
+    "original": "DSA/README.md",
+    "archive": "legacy/python-dsa/README.md",
+    "sha256": "867b2aa8b89d5a649d36a221fb511c9ddb412b1438783e01c6d32ff3fe5368b7"
+  },
+  {
+    "original": "DSA/app.py",
+    "archive": "legacy/python-dsa/app.py",
+    "sha256": "d12c4593a33e1c43d890f55e6e1bbfcab0cc2ecca006aebbb94d1224be17a69a"
+  },
+  {
+    "original": "DSA/cs_viz/__init__.py",
+    "archive": "legacy/python-dsa/cs_viz/__init__.py",
+    "sha256": "99b9eff8867478a610054c6ae9b2b30d9110cf19f30db5f8b5dd00adae7dfa2b"
+  },
+  {
+    "original": "DSA/cs_viz/ai/__init__.py",
+    "archive": "legacy/python-dsa/cs_viz/ai/__init__.py",
+    "sha256": "508cc54837978c1efe6e75a67f984dee6b47ff9de1da357db178e78b4d7d1049"
+  },
+  {
+    "original": "DSA/cs_viz/ai/tokenization.py",
+    "archive": "legacy/python-dsa/cs_viz/ai/tokenization.py",
+    "sha256": "745a12df9a621e0afeed0868028ac9cf2ce9b1a2181d6b2776526dfd9f02554f"
+  },
+  {
+    "original": "DSA/cs_viz/ai/transformer.py",
+    "archive": "legacy/python-dsa/cs_viz/ai/transformer.py",
+    "sha256": "cce5e6bed912543c462369ca37625a27c9567fd441fee40e8d18e9ebb41ba106"
+  },
+  {
+    "original": "DSA/cs_viz/ai/visualizations.py",
+    "archive": "legacy/python-dsa/cs_viz/ai/visualizations.py",
+    "sha256": "b3da8ffcbbfc45017220333a5059a613e2af75bd9461c5430dbf65522e29fbfe"
+  },
+  {
+    "original": "DSA/cs_viz/dsa/__init__.py",
+    "archive": "legacy/python-dsa/cs_viz/dsa/__init__.py",
+    "sha256": "b10d20efa81ed2f89235069cdeb80ac2fdcbc5f132b96367f7178ddc631c162f"
+  },
+  {
+    "original": "DSA/cs_viz/dsa/dynamic_programming.py",
+    "archive": "legacy/python-dsa/cs_viz/dsa/dynamic_programming.py",
+    "sha256": "bb009a40c6c535a35f86f275ded975f8f5e424941c4005d3990730ed7b10da6c"
+  },
+  {
+    "original": "DSA/cs_viz/dsa/graph.py",
+    "archive": "legacy/python-dsa/cs_viz/dsa/graph.py",
+    "sha256": "d509882aa3a567b1dd7d005f2345bb6066ef9bb52a89aace6791c9140a4917f6"
+  },
+  {
+    "original": "DSA/cs_viz/dsa/linked_list.py",
+    "archive": "legacy/python-dsa/cs_viz/dsa/linked_list.py",
+    "sha256": "65a5e947a3e06aefaf877c5c8c1d3c8246ec8b9403a4fabfab605dbfc0f6579e"
+  },
+  {
+    "original": "DSA/cs_viz/dsa/sorting.py",
+    "archive": "legacy/python-dsa/cs_viz/dsa/sorting.py",
+    "sha256": "e75209ba21764f513cbb6f367edfae89f3348cf636d275ef85dcedcd99bd4cae"
+  },
+  {
+    "original": "DSA/cs_viz/dsa/visualizations.py",
+    "archive": "legacy/python-dsa/cs_viz/dsa/visualizations.py",
+    "sha256": "290722da2894b09fefa5f5f47b8b7407b5d97da9a68ae021c43d1b6fb4794b75"
+  },
+  {
+    "original": "DSA/cs_viz/ui/__init__.py",
+    "archive": "legacy/python-dsa/cs_viz/ui/__init__.py",
+    "sha256": "6dcc42e7d34610f55f0df6f85704a88f5987b965499d677e68d12632f64c9a52"
+  },
+  {
+    "original": "DSA/cs_viz/ui/ai_page.py",
+    "archive": "legacy/python-dsa/cs_viz/ui/ai_page.py",
+    "sha256": "9a56c8225f9fb462be0bbdf3f70d3d98a8283939ce1561e24d712bc6dfac25c1"
+  },
+  {
+    "original": "DSA/cs_viz/ui/common.py",
+    "archive": "legacy/python-dsa/cs_viz/ui/common.py",
+    "sha256": "e427695e4d433db7fc78a4b16650a87caa77af5ef497dfd94c5176603435d21c"
+  },
+  {
+    "original": "DSA/cs_viz/ui/dsa_page.py",
+    "archive": "legacy/python-dsa/cs_viz/ui/dsa_page.py",
+    "sha256": "bd4e52fbb0c46760578fecd361634dd6ba438e3e6e25aa58b723217a90b178ab"
+  },
+  {
+    "original": "DSA/requirements.txt",
+    "archive": "legacy/python-dsa/requirements.txt",
+    "sha256": "523c6e340b3f37a057eb1f06d4f951e75d427cff75f144a6078e317f41654cc8"
+  },
+  {
+    "original": "DSA/tests/test_dsa_traces.py",
+    "archive": "legacy/python-dsa/tests/test_dsa_traces.py",
+    "sha256": "ea904c7ecd249cec727f1922b2e2e3b418a3d5b5af1499b6b663c3c678fff709"
+  },
+  {
+    "original": "DSA/tests/test_transformer_math.py",
+    "archive": "legacy/python-dsa/tests/test_transformer_math.py",
+    "sha256": "f99766dc420bf59d3a12e5b6f2735fee69f2acf4c810f8fc858bfecded3035db"
+  },
+  {
+    "original": "codex cs_visualizer/.gitignore",
+    "archive": "legacy/python-codex/.gitignore",
+    "sha256": "1c1881053a5169bf2c4e3015aabdacabc65d7028e32c275fecbdd5d4343aa88a"
+  },
+  {
+    "original": "codex cs_visualizer/README.md",
+    "archive": "legacy/python-codex/README.md",
+    "sha256": "867b2aa8b89d5a649d36a221fb511c9ddb412b1438783e01c6d32ff3fe5368b7"
+  },
+  {
+    "original": "codex cs_visualizer/app.py",
+    "archive": "legacy/python-codex/app.py",
+    "sha256": "d12c4593a33e1c43d890f55e6e1bbfcab0cc2ecca006aebbb94d1224be17a69a"
+  },
+  {
+    "original": "codex cs_visualizer/cs_viz/__init__.py",
+    "archive": "legacy/python-codex/cs_viz/__init__.py",
+    "sha256": "99b9eff8867478a610054c6ae9b2b30d9110cf19f30db5f8b5dd00adae7dfa2b"
+  },
+  {
+    "original": "codex cs_visualizer/cs_viz/ai/__init__.py",
+    "archive": "legacy/python-codex/cs_viz/ai/__init__.py",
+    "sha256": "508cc54837978c1efe6e75a67f984dee6b47ff9de1da357db178e78b4d7d1049"
+  },
+  {
+    "original": "codex cs_visualizer/cs_viz/ai/tokenization.py",
+    "archive": "legacy/python-codex/cs_viz/ai/tokenization.py",
+    "sha256": "745a12df9a621e0afeed0868028ac9cf2ce9b1a2181d6b2776526dfd9f02554f"
+  },
+  {
+    "original": "codex cs_visualizer/cs_viz/ai/transformer.py",
+    "archive": "legacy/python-codex/cs_viz/ai/transformer.py",
+    "sha256": "cce5e6bed912543c462369ca37625a27c9567fd441fee40e8d18e9ebb41ba106"
+  },
+  {
+    "original": "codex cs_visualizer/cs_viz/ai/visualizations.py",
+    "archive": "legacy/python-codex/cs_viz/ai/visualizations.py",
+    "sha256": "b3da8ffcbbfc45017220333a5059a613e2af75bd9461c5430dbf65522e29fbfe"
+  },
+  {
+    "original": "codex cs_visualizer/cs_viz/dsa/__init__.py",
+    "archive": "legacy/python-codex/cs_viz/dsa/__init__.py",
+    "sha256": "b10d20efa81ed2f89235069cdeb80ac2fdcbc5f132b96367f7178ddc631c162f"
+  },
+  {
+    "original": "codex cs_visualizer/cs_viz/dsa/dynamic_programming.py",
+    "archive": "legacy/python-codex/cs_viz/dsa/dynamic_programming.py",
+    "sha256": "bb009a40c6c535a35f86f275ded975f8f5e424941c4005d3990730ed7b10da6c"
+  },
+  {
+    "original": "codex cs_visualizer/cs_viz/dsa/graph.py",
+    "archive": "legacy/python-codex/cs_viz/dsa/graph.py",
+    "sha256": "d509882aa3a567b1dd7d005f2345bb6066ef9bb52a89aace6791c9140a4917f6"
+  },
+  {
+    "original": "codex cs_visualizer/cs_viz/dsa/linked_list.py",
+    "archive": "legacy/python-codex/cs_viz/dsa/linked_list.py",
+    "sha256": "65a5e947a3e06aefaf877c5c8c1d3c8246ec8b9403a4fabfab605dbfc0f6579e"
+  },
+  {
+    "original": "codex cs_visualizer/cs_viz/dsa/sorting.py",
+    "archive": "legacy/python-codex/cs_viz/dsa/sorting.py",
+    "sha256": "e75209ba21764f513cbb6f367edfae89f3348cf636d275ef85dcedcd99bd4cae"
+  },
+  {
+    "original": "codex cs_visualizer/cs_viz/dsa/visualizations.py",
+    "archive": "legacy/python-codex/cs_viz/dsa/visualizations.py",
+    "sha256": "290722da2894b09fefa5f5f47b8b7407b5d97da9a68ae021c43d1b6fb4794b75"
+  },
+  {
+    "original": "codex cs_visualizer/cs_viz/ui/__init__.py",
+    "archive": "legacy/python-codex/cs_viz/ui/__init__.py",
+    "sha256": "6dcc42e7d34610f55f0df6f85704a88f5987b965499d677e68d12632f64c9a52"
+  },
+  {
+    "original": "codex cs_visualizer/cs_viz/ui/ai_page.py",
+    "archive": "legacy/python-codex/cs_viz/ui/ai_page.py",
+    "sha256": "9a56c8225f9fb462be0bbdf3f70d3d98a8283939ce1561e24d712bc6dfac25c1"
+  },
+  {
+    "original": "codex cs_visualizer/cs_viz/ui/common.py",
+    "archive": "legacy/python-codex/cs_viz/ui/common.py",
+    "sha256": "e427695e4d433db7fc78a4b16650a87caa77af5ef497dfd94c5176603435d21c"
+  },
+  {
+    "original": "codex cs_visualizer/cs_viz/ui/dsa_page.py",
+    "archive": "legacy/python-codex/cs_viz/ui/dsa_page.py",
+    "sha256": "bd4e52fbb0c46760578fecd361634dd6ba438e3e6e25aa58b723217a90b178ab"
+  },
+  {
+    "original": "codex cs_visualizer/requirements.txt",
+    "archive": "legacy/python-codex/requirements.txt",
+    "sha256": "523c6e340b3f37a057eb1f06d4f951e75d427cff75f144a6078e317f41654cc8"
+  },
+  {
+    "original": "codex cs_visualizer/tests/test_dsa_traces.py",
+    "archive": "legacy/python-codex/tests/test_dsa_traces.py",
+    "sha256": "ea904c7ecd249cec727f1922b2e2e3b418a3d5b5af1499b6b663c3c678fff709"
+  },
+  {
+    "original": "codex cs_visualizer/tests/test_transformer_math.py",
+    "archive": "legacy/python-codex/tests/test_transformer_math.py",
+    "sha256": "f99766dc420bf59d3a12e5b6f2735fee69f2acf4c810f8fc858bfecded3035db"
+  }
+]

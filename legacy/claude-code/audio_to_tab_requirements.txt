@@ -1,0 +1,14 @@
+# audio_to_tab.py — dependencies
+#
+# Primary path (recommended): librosa supplies pYIN pitch tracking, robust
+# onset detection, and resampling.
+numpy>=1.24
+scipy>=1.10            # WAV I/O fallback + general math
+librosa>=0.10          # pYIN, onsets, load/resample  (pulls in numba, soundfile)
+soundfile>=0.12        # writing WAVs (used by the synthesis self-test)
+
+# Optional neural pitch tracker (`--tracker crepe`):
+#   pip install crepe tensorflow
+#
+# The script also runs with NO librosa at all: it falls back to a built-in
+# NumPy YIN tracker + spectral-flux onset detector (scipy only).

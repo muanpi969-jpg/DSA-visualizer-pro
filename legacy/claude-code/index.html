@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ML Visual Lab — interactive machine learning</title>
+  <meta name="description" content="An interactive, dependency-free machine-learning visualization tool: neural network playground, optimizer landscapes, K-Means clustering, and polynomial regression." />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>%E2%88%91</text></svg>" />
+</head>
+<body>
+  <div id="app"></div>
+
+  <!-- order matters: utils → data/engine → ui → modules → app -->
+  <script src="js/utils.js"></script>
+  <script src="js/datasets.js"></script>
+  <script src="js/nn.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/playground.js"></script>
+  <script src="js/optimizers.js"></script>
+  <script src="js/kmeans.js"></script>
+  <script src="js/regression.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

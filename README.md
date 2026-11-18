@@ -1,86 +1,101 @@
-# DSA Visualizer
+# DSA Studio
 
-An interactive, step-by-step Data Structures & Algorithms visualizer. Every
-algorithm run is understandable at three levels: **visual state** (what changed),
-**code state** (which line caused it), and **conceptual state** (metrics &
-invariants explaining why).
+A unified algorithm learning workspace with Liquid Glass surfaces, reversible playback, source-code tracing in C, JavaScript, and Python, metrics, and optional synthesized sound. Twenty visualizers run entirely in your browser; deployment needs no Python service, database, or environment variables.
 
-Built with Next.js (App Router) · TypeScript · Tailwind · Radix (shadcn-style) ·
-Zustand · Framer Motion · Monaco · Web Audio.
+## Run locally
 
-## Getting started
+Use Node.js 24 and npm 11 (`nvm use` if you use nvm).
 
-```bash
-npm install
-npm run dev        # http://localhost:3000  (redirects to /visualizers)
+```sh
+npm ci
+npm run dev
 ```
 
-## Scripts
+Open http://localhost:3000. For the production site:
 
-| Command             | Purpose                                  |
-| ------------------- | ---------------------------------------- |
-| `npm run dev`       | Start the dev server                     |
-| `npm run build`     | Production build                         |
-| `npm run typecheck` | `tsc --noEmit`                           |
-| `npm run lint`      | ESLint (next/core-web-vitals)            |
-| `npm run test`      | Vitest unit + component tests            |
-| `npm run e2e`       | Playwright end-to-end smoke tests        |
+```sh
+npm run build
+npm run preview
+```
+
+Preview serves http://127.0.0.1:3100 from `apps/web/out`.
+
+## Deploy on Vercel
+
+Import [muanpi969-jpg/DSA-visualizer-pro](https://github.com/muanpi969-jpg/DSA-visualizer-pro) into Vercel. Keep **Root Directory at the repository root** and **Framework Preset: Other**. The root `vercel.json` supplies everything:
+
+| Setting               | Value           |
+| --------------------- | --------------- |
+| Install               | `npm ci`        |
+| Build                 | `npm run build` |
+| Output                | `apps/web/out`  |
+| Node.js               | 24.x            |
+| Environment variables | None            |
+
+The app is a Next.js static export. Vercel serves HTML, CSS, JavaScript, the algorithm Worker, and local Monaco assets. Keep trailing slashes enabled. Do not configure `next start` or an SPA catch-all rewrite: every algorithm route has its own HTML file, and unknown routes should return 404.
+
+For an existing Vercel project that previously used the old root-level Next app, change its root/framework settings to the values above before redeploying. After connecting the repository, Vercel creates deployments automatically for Git pushes.
+
+Alternatively, from an authenticated Vercel CLI session run `vercel` at the repository root, then `vercel --prod` when ready to publish.
+
+## Algorithms
+
+- **Sorting:** Bubble, Selection, Insertion, Merge, Quick, Heap.
+- **Searching:** Linear, Binary, Jump, Interpolation, Exponential, Ternary.
+- **Graphs:** BFS and DFS, including directed and disconnected inputs.
+- **Linked lists:** Insert-after, Reverse, Middle (second middle for even lengths).
+- **Dynamic programming:** Edit Distance, Longest Common Subsequence, 0/1 Knapsack.
+
+Graphs visualize the component reachable from the selected start node. Tree visualizers, weighted shortest paths, and ML demos remain future work.
+
+## Controls
+
+Play/pause, forward/backward stepping, timeline seeking, reset, input presets, editable inputs, speed, fullscreen, theme, reduced motion, reduced transparency, mute, and volume. Keyboard shortcuts: Space play/pause; arrows step; R reset; M mute; F fullscreen. Shortcuts leave text inputs and code editing alone.
+
+Audio starts only after a user gesture and is muted by default. Click **Sound off** to enable it and hear a short preview, or use **Test sound**. The volume percentage is visible; enabling/testing restores a zero-volume preference to 60%. Browser audio startup errors appear inline. Rewind and seeking are silent. Preferences persist locally. Reduced motion and audio are independent.
 
 ## Architecture
 
-The whole app is built around a single **step model**. Algorithm generators emit
-`VisualizationStep` objects; the playback store selects the active step;
-renderers animate toward it. Renderers never compute algorithm results.
-
+```text
+apps/web/                  active Next.js / TypeScript application
+  lib/algorithms/           pure generators, metadata, validation, source maps
+  lib/playback/             bounded Worker generation and serializable protocol
+  lib/stores/               timeline and persisted preferences
+  lib/audio/                zero-dependency Web Audio synthesis and cue policy
+  components/renderers/     arrays, graphs, linked lists, DP matrices
+legacy/                    unchanged reference source from all four projects
+scripts/                   static preview and optional Monaco asset packaging
+MASTER_PLAN.md             approved roadmap and architectural decisions
+VERIFICATION.md            implementation checks and remaining limits
 ```
-lib/algorithms/     types, registry, and per-algorithm generators/definitions
-lib/playback/       memoized step building + timing helpers
-lib/stores/         Zustand playback (timeline) + preferences (audio/motion)
-lib/audio/          Web Audio engine + cue helpers
-components/renderers renderers keyed by VisualizerKind (ArrayRenderer, …)
-components/visualizer shell, toolbar, viewport, code trace, metrics, legend
+
+The UI sends a Worker `{runId, slug, input}`; generators emit immutable-by-convention, independently owned state snapshots. Only the current run remains in memory. A maximum of 10,000 frames or 16 MiB of UTF-8 serialized trace data bounds generation. Serialized byte size is not heap size; Workers and structured cloning temporarily add memory overhead. Truncation is explicit and never reported as successful completion.
+
+The playback store records transition intent so audio follows forward actions rather than arbitrary state changes. Renderers present snapshots and never compute algorithm results.
+
+## Checks
+
+```sh
+npm run lint
+npm run typecheck
+npm test                          # C source tests use an available cc compiler
+npm run test:c                     # optional: Python 3 + clang/cc, checks 12 C references
+npm run build
+npx playwright install chromium firefox webkit   # first browser-test setup
+npm run e2e
+npm audit --omit=dev
 ```
 
-Key contracts live in [`lib/algorithms/types.ts`](lib/algorithms/types.ts):
-`VisualizationStep`, `AlgorithmDefinition`, `RendererProps`.
+CI runs those checks against the actual static export. For one browser use `npm run e2e -- --project=chromium`.
 
-## Adding a new algorithm
+## Add a module
 
-1. Create `lib/algorithms/<category>/<slug>/`.
-2. Add `types.ts` (input, state, highlights), `generator.ts` (a **pure**
-   `function*` yielding `VisualizationStep`s), and `definition.ts` (metadata,
-   `validateInput`, presets, multi-language `code`).
-3. Register it in [`lib/algorithms/registry.ts`](lib/algorithms/registry.ts).
-   It now appears in the catalog, routing, and shell automatically.
-4. Reuse an existing renderer via the step's `kind` when possible.
-5. Add unit tests: final correctness + `validateSteps()` schema checks.
-6. Verify light/dark, mobile, reduced motion, and keyboard controls.
+1. Implement a pure generator, bounded input validation, metadata/presets, and source snippets in `apps/web/lib/algorithms`.
+2. Emit independent serializable snapshots with stable IDs, cumulative metrics, explanatory notes, and semantic operations. Use a matching renderer kind.
+3. Register the definition in `lib/algorithms/registry.ts` and supply typed input controls where required.
+4. Test final results, intermediate invariants, snapshot independence, source mappings, and boundary inputs.
+5. Build and test the exported route, including Worker loading, responsive layout, and keyboard operation.
 
-### Step-generator rules
+## Provenance
 
-- Yield an atomic step **before/after** meaningful mutations (compares, swaps,
-  pointer moves, writes).
-- Keep `state` serializable; give moving elements a stable `id`.
-- Cumulative metrics (comparisons/swaps/writes) must be **monotonic**.
-- Map `code.activeLines` to the `primaryLanguage` source lines.
-- The final step must clearly communicate the result.
-
-## Accessibility & preferences
-
-- Full keyboard control: `Space` play/pause, `←`/`→` step, `R` reset, `M` mute,
-  `F` fullscreen (shortcuts never hijack typing).
-- `aria-live` step notes, visible focus states, and text summaries for renderers.
-- Respects `prefers-reduced-motion` (plus a manual override).
-- Audio is **off by default** and only starts after a user gesture.
-
-## Status
-
-Phase 1 (Foundation) and Phase 2 (Array & Search Engine) are complete —
-12 interactive visualizers, all sharing the same shell and `ArrayRenderer`:
-
-- **Sorting:** Bubble, Selection, Insertion, Merge, Quick, Heap
-- **Searching:** Linear, Binary, Jump, Interpolation, Exponential, Ternary
-  (with target inputs and validated sorted-array preconditions)
-
-Next: Phase 3 (Graph Engine — shared graph model, GraphRenderer, BFS/DFS/
-Dijkstra, then the remaining graph algorithms). See `CLAUDE.md` for the roadmap.
+`legacy/SOURCE_MANIFEST.json` records the original path, archive path, and SHA-256 checksum for every preserved authored source. `legacy/python-dsa` and `legacy/python-codex` contain identical authored projects. Their original environments remain local and ignored; they are not part of the website or its dependencies. The Git history preserves the initial workspace baseline.

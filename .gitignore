@@ -1,0 +1,16 @@
+**/node_modules/
+**/.venv/
+**/__pycache__/
+**/.next/
+**/out/
+**/coverage/
+**/test-results/
+**/playwright-report/
+**/*.tsbuildinfo
+**/.DS_Store
+**/.claude/
+**/.env*
+!**/.env.example
+*.log
+**/public/monaco/
+.vercel/
