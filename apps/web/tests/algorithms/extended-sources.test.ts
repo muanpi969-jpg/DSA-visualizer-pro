@@ -268,6 +268,10 @@ function cCase(definition: AnyAlgorithmDefinition, input: unknown): string {
             : "head") +
           ";"
         : "head = reverse(head);";
+    // An empty result has no nodes to iterate. Check NULL directly instead of
+    // generating an unsigned `count < 0` comparison rejected by GCC -Werror.
+    if (expected.length === 0)
+      return "{ " + setup + execute + " assert(head == NULL); (void)nodes; }";
     return (
       "{ " +
       setup +
