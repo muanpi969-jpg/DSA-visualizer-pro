@@ -7,12 +7,14 @@ import { CATEGORY_LABELS } from "@/lib/algorithms/registry";
 import { ArrayDataControls } from "./ArrayDataControls";
 import { ModuleDataControls } from "./ModuleDataControls";
 import { PreferencesControls } from "./PreferencesControls";
+import { useMounted } from "@/lib/hooks/useMounted";
 
 export function VisualizerToolbar({
   definition,
 }: {
   definition: AnyAlgorithmDefinition;
 }) {
+  const mounted = useMounted();
   return (
     <div className="visualizer-header">
       <div className="mb-5 flex items-center gap-2 text-[11px] text-muted-foreground">
@@ -43,7 +45,9 @@ export function VisualizerToolbar({
           <PreferencesControls />
         </div>
       </div>
-      <div className="visualizer-data glass-panel">
+      {/* SSR controls become editable only after their client handlers attach. */}
+      <fieldset disabled={!mounted} className="visualizer-data glass-panel min-w-0">
+        <legend className="sr-only">Algorithm input</legend>
         <div className="mb-3 flex items-center gap-2">
           <span className="eyebrow">Your input</span>
           <span className="text-[10px] text-muted-foreground/70">
@@ -52,12 +56,12 @@ export function VisualizerToolbar({
         </div>
         {definition.visualizerKind === "array" ? (
           <div className="array-data-controls">
-            <ArrayDataControls definition={definition} />
+            <ArrayDataControls key={definition.slug} definition={definition} />
           </div>
         ) : (
-          <ModuleDataControls definition={definition} />
+          <ModuleDataControls key={definition.slug} definition={definition} />
         )}
-      </div>
+      </fieldset>
     </div>
   );
 }

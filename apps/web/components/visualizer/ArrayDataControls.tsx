@@ -50,15 +50,17 @@ export function ArrayDataControls({
   const selectedInput = usePlaybackStore(
     (s) => s.selectedInput,
   ) as ArrayLikeInput | null;
+  const selectedSlug = usePlaybackStore((s) => s.selectedAlgorithmSlug);
   const loadAlgorithm = usePlaybackStore((s) => s.loadAlgorithm);
-
-  const currentArray = React.useMemo(
-    () => selectedInput?.array ?? [],
-    [selectedInput],
-  );
-  const [text, setText] = React.useState(currentArray.join(", "));
+  // The first shell load publishes this same default object. Keeping the
+  // effective input stable prevents that publication from replacing a draft.
+  const currentInput =
+    selectedSlug === definition.slug && Array.isArray(selectedInput?.array)
+      ? selectedInput!
+      : (definition.defaultInput as ArrayLikeInput);
+  const [text, setText] = React.useState(() => currentInput.array.join(", "));
   const [targetText, setTargetText] = React.useState(
-    selectedInput?.target !== undefined ? String(selectedInput.target) : "",
+    currentInput.target !== undefined ? String(currentInput.target) : "",
   );
   const [error, setError] = React.useState<string | null>(null);
   const [presetId, setPresetId] = React.useState<string>("");
@@ -66,12 +68,9 @@ export function ArrayDataControls({
   // Keep the fields in sync when the input changes elsewhere (e.g. presets,
   // switching algorithms).
   React.useEffect(() => {
-    setText(currentArray.join(", "));
-    if (selectedInput?.target !== undefined) {
-      setTargetText(String(selectedInput.target));
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [selectedInput]);
+    setText(currentInput.array.join(", "));
+    setTargetText(currentInput.target !== undefined ? String(currentInput.target) : "");
+  }, [currentInput]);
 
   const apply = React.useCallback(
     (array: number[], target?: number) => {

@@ -6,7 +6,7 @@ Verified on November 18, 2026 against the actual static export.
 | --- | --- |
 | ESLint | Passed without warnings |
 | TypeScript / Next route types | Passed |
-| Unit, component, algorithm, source-language and audio tests | 324 passed, 16 files |
+| Unit, component, algorithm, source-language and audio tests | 337 passed, 17 files |
 | Production static build | Passed; dashboard, catalog, 20 algorithm routes and 404 exported |
 | Chromium, mobile Chromium and WebKit browser checks | 138 passed, 0 skipped, 0 unexpected, 0 flaky |
 | C sorting/search references | 12 strict C17 compilations; 14,400 edge/randomized input sets passed with AddressSanitizer and UndefinedBehaviorSanitizer |
@@ -22,7 +22,7 @@ The browser suite serves `apps/web/out`, not the development server. It verifies
 
 The development server also loaded Binary Search with an enabled timeline and no page errors.
 
-Firefox is configured in CI but could not launch locally on this Mac. Two launch attempts failed before application execution with macOS sandbox-extension / SWGL framebuffer errors. No sandbox protections were disabled. The Linux GitHub Actions job runs the complete four-project browser suite, including Firefox.
+Firefox is configured in CI but could not launch locally on this Mac. Two launch attempts failed before application execution with macOS sandbox-extension / SWGL framebuffer errors. No sandbox protections were disabled. The Linux GitHub Actions job runs the complete four-project browser suite, including Firefox. A PulseAudio null sink supplies real-time audio output in the headless runner; this keeps the native AudioContext startup check active alongside offline PCM synthesis checks. The workflow prints audio-server and sink diagnostics before launching browsers.
 
 ## Sound output
 
@@ -35,7 +35,7 @@ Tests render the application's native Web Audio synthesis graph to PCM through a
 
 The earlier comparison measured peak0.04831/RMS0.01236. The revised pluck has a longer audible body. Eight coherent comparison voices at full volume measured peak0.68285, below clipping. Voice and cue-rate limits remain enforced.
 
-Sound is muted on first use. **Sound off** enables it and plays a preview; **Test sound** starts/resumes audio and plays a sample without starting algorithm playback. Zero-volume preferences restore to60% when explicitly enabling/testing. Audio startup failures appear inline. Device volume and browser-tab muting still affect physical speaker output.
+Sound is muted on first use. **Sound off** enables it and plays a preview; **Test sound** starts/resumes audio and plays a sample without starting algorithm playback. Zero-volume preferences restore to60% when explicitly enabling/testing. Audio startup failures appear inline. A stalled native resume times out after three seconds, closes the abandoned context, and permits a fresh gesture to retry; a regression also verifies that late resolution of the old context cannot disrupt the replacement. Device volume and browser-tab muting still affect physical speaker output.
 
 ## Delivery and limitations
 

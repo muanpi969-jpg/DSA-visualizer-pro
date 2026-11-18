@@ -52,7 +52,7 @@ Graphs visualize the component reachable from the selected start node. Tree visu
 
 Play/pause, forward/backward stepping, timeline seeking, reset, input presets, editable inputs, speed, fullscreen, theme, reduced motion, reduced transparency, mute, and volume. Keyboard shortcuts: Space play/pause; arrows step; R reset; M mute; F fullscreen. Shortcuts leave text inputs and code editing alone.
 
-Audio starts only after a user gesture and is muted by default. Click **Sound off** to enable it and hear a short preview, or use **Test sound**. The volume percentage is visible; enabling/testing restores a zero-volume preference to 60%. Browser audio startup errors appear inline. Rewind and seeking are silent. Preferences persist locally. Reduced motion and audio are independent.
+Audio starts only after a user gesture and is muted by default. Click **Sound off** to enable it and hear a short preview, or use **Test sound**. The volume percentage is visible; enabling/testing restores a zero-volume preference to 60%. Browser audio startup errors appear inline. A stalled startup returns to Sound off with retry guidance instead of leaving the controls disabled. Rewind and seeking are silent. Preferences persist locally. Reduced motion and audio are independent.
 
 ## Architecture
 

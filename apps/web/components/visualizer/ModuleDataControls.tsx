@@ -130,20 +130,20 @@ export function ModuleDataControls({ definition }: ModuleDataControlsProps) {
   const selectedInput = usePlaybackStore((state) => state.selectedInput);
   const selectedSlug = usePlaybackStore((state) => state.selectedAlgorithmSlug);
   const loadAlgorithm = usePlaybackStore((state) => state.loadAlgorithm);
+  const source =
+    selectedSlug === definition.slug && selectedInput
+      ? selectedInput
+      : definition.defaultInput;
   const [fields, setFields] = useState<Fields>(() =>
-    fieldsFor(definition.slug, definition.defaultInput),
+    fieldsFor(definition.slug, source),
   );
   const [error, setError] = useState<string | null>(null);
   const [preset, setPreset] = useState("");
   useEffect(() => {
-    const source =
-      selectedSlug === definition.slug && selectedInput
-        ? selectedInput
-        : definition.defaultInput;
     setFields(fieldsFor(definition.slug, source));
     setError(null);
     setPreset("");
-  }, [definition, selectedInput, selectedSlug]);
+  }, [definition.slug, source]);
   const update = (name: string, value: string) =>
     setFields((previous) => ({ ...previous, [name]: value }));
   const field = (

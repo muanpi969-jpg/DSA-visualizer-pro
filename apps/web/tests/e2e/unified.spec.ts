@@ -415,6 +415,9 @@ test("motion, audio, and transparency remain independent and persist across refr
     .click();
   await expect(page.locator("html")).toHaveClass(/reduced-transparency/);
   await page.getByRole("button", { name: "Unmute audio", exact: true }).click();
+  const soundToggle = page.getByRole("button", { name: "Mute audio", exact: true });
+  await expect(soundToggle).toBeVisible();
+  await expect(soundToggle).toBeEnabled();
   await page.getByRole("button", { name: "Play", exact: true }).click();
   await expect
     .poll(() => page.evaluate(() => window.__dsaAudioProbe.starts))

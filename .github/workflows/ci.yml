@@ -27,7 +27,19 @@ jobs:
       - run: npm audit --omit=dev --audit-level=high
       - run: npx playwright install --with-deps chromium firefox webkit
         working-directory: apps/web
+      - name: Start virtual audio output
+        run: |
+          sudo apt-get install -y pulseaudio pulseaudio-utils
+          pulseaudio --start --exit-idle-time=-1
+          pactl load-module module-null-sink sink_name=dsa_ci rate=48000 channels=2
+          pactl set-default-sink dsa_ci
+          pactl set-sink-mute dsa_ci 0
+          pactl set-sink-volume dsa_ci 100%
+          pactl info
+          pactl list short sinks
       - run: npm run e2e
+        env:
+          PULSE_SINK: dsa_ci
       - uses: actions/upload-artifact@v4
         if: failure()
         with:

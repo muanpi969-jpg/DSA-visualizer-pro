@@ -67,6 +67,7 @@ beforeEach(() => {
 });
 afterEach(() => {
   engine.dispose();
+  vi.useRealTimers();
   vi.restoreAllMocks();
   vi.unstubAllGlobals();
 });
@@ -170,6 +171,37 @@ describe("audio lifecycle and budgets", () => {
     await expect(first).resolves.toBe(true);
     expect(Context.instances).toHaveLength(1);
     expect(Context.instances[0].resume).toHaveBeenCalledOnce();
+  });
+
+  it("times out a hung resume, releases its context, and allows a fresh gesture to recover", async () => {
+    vi.useFakeTimers();
+    Context.suspended = true;
+    let finishOldResume: () => void = () => {};
+    vi.stubGlobal("AudioContext", class extends Context {
+      resume = vi.fn(() => new Promise<void>((resolve) => {
+        finishOldResume = () => { this.state = "running"; resolve(); };
+      }));
+    });
+    const pending = engine.ensureStarted();
+    const oldContext = Context.instances[0];
+    await vi.advanceTimersByTimeAsync(2999);
+    expect(oldContext.close).not.toHaveBeenCalled();
+    await vi.advanceTimersByTimeAsync(1);
+    await expect(pending).resolves.toBe(false);
+    expect(oldContext.close).toHaveBeenCalledOnce();
+    expect(engine.getUnavailableMessage()).toMatch(/Test sound to try again/);
+    expect(vi.getTimerCount()).toBe(0);
+
+    Context.suspended = false;
+    vi.stubGlobal("AudioContext", Context);
+    await expect(engine.ensureStarted()).resolves.toBe(true);
+    finishOldResume();
+    await Promise.resolve();
+    engine.setMuted(false);
+    engine.play(cue.compare(440));
+    expect(Context.instances[1].oscillators).toHaveLength(1);
+    expect(oldContext.oscillators).toHaveLength(0);
+    expect(engine.getUnavailableMessage()).toBeNull();
   });
 
   it("synthesizes two soft tones for node and edge cues and suppresses hidden-tab audio", async () => {

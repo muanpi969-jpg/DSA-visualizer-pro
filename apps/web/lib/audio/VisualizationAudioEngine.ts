@@ -3,6 +3,7 @@ import type { AudioCue } from "@/lib/algorithms/types";
 const MASTER_LEVEL = 0.8;
 const MAX_VOICES = 8;
 const MAX_REGULAR_CUES_PER_SECOND = 20;
+const AUDIO_START_TIMEOUT_MS = 3000;
 
 /** Optional synthesis hints used by the semantic adapter, outside algorithm state. */
 export interface SynthesizedCue extends AudioCue {
@@ -107,7 +108,24 @@ export class VisualizationAudioEngine {
           : this.volume * MASTER_LEVEL;
         this.masterGain.connect(this.compressor);
       }
-      if (this.ctx.state !== "running") await this.ctx.resume();
+      if (this.ctx.state !== "running") {
+        let timeout: ReturnType<typeof setTimeout> | undefined;
+        try {
+          // Some browsers leave resume pending when no audio output is
+          // available. Release the UI and discard that context for a retry.
+          await Promise.race([
+            this.ctx.resume(),
+            new Promise<never>((_, reject) => {
+              timeout = setTimeout(
+                () => reject(new Error("Audio startup timed out.")),
+                AUDIO_START_TIMEOUT_MS,
+              );
+            }),
+          ]);
+        } finally {
+          if (timeout !== undefined) clearTimeout(timeout);
+        }
+      }
       if (this.ctx.state !== "running")
         throw new Error("Audio context is not running.");
       this.reportAvailability(null);
